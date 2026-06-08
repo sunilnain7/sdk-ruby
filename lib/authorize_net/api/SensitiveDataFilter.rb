@@ -20,7 +20,9 @@ class SensitiveDataConfigType
 		      SensitiveTag.new("accountNumber", "(\\p{N}+)(\\p{N}{4})", "XXXX-\\2", false),
 		      SensitiveTag.new("nameOnAccount", "", "XXX", false),
 		      SensitiveTag.new("transactionKey", "", "XXX", false),
-		      SensitiveTag.new("accessToken", "", "XXX", false)]).freeze
+		      SensitiveTag.new("accessToken", "", "XXX", false),
+		      SensitiveTag.new("connectedAccessToken", "", "XXX", false),
+		      SensitiveTag.new("sessionToken", "", "XXX", false)]).freeze
 	@sensitiveStringRegexes = ["4\\p{N}{3}([\\ \\-]?)\\p{N}{4}\\1\\p{N}{4}\\1\\p{N}{4}",
 			          "4\\p{N}{3}([\\ \\-]?)(?:\\p{N}{4}\\1){2}\\p{N}(?:\\p{N}{3})?",
             			  "5[1-5]\\p{N}{2}([\\ \\-]?)\\p{N}{4}\\1\\p{N}{4}\\1\\p{N}{4}",
